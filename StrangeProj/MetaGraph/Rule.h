@@ -12,7 +12,7 @@
 */
 #ifndef __INCLUDE__RULE__
 #define __INCLUDE_RULE__
-#include <..\..\..\..\..\..\MetaGraff\github\Vertex.h>
+#include "Vertex.h"
 #include <functional>
 
 class Rule : basicObj {

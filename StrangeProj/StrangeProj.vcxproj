@@ -152,14 +152,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Attribute.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\basicObj.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Edge.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\MetaEdge.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\MetaGraph.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\MetaVertex.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Rule.h" />
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Vertex.h" />
+    <ClInclude Include="MetaGraph\Attribute.h" />
+    <ClInclude Include="MetaGraph\basicObj.h" />
+    <ClInclude Include="MetaGraph\Edge.h" />
+    <ClInclude Include="MetaGraph\MetaEdge.h" />
+    <ClInclude Include="MetaGraph\MetaGraph.h" />
+    <ClInclude Include="MetaGraph\MetaVertex.h" />
+    <ClInclude Include="MetaGraph\Rule.h" />
+    <ClInclude Include="MetaGraph\Vertex.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

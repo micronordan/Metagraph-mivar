@@ -18,28 +18,28 @@
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Attribute.h">
+    <ClInclude Include="MetaGraph\Attribute.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Edge.h">
+    <ClInclude Include="MetaGraph\basicObj.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\MetaEdge.h">
+    <ClInclude Include="MetaGraph\Edge.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\MetaVertex.h">
+    <ClInclude Include="MetaGraph\MetaEdge.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Vertex.h">
+    <ClInclude Include="MetaGraph\MetaGraph.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\basicObj.h">
+    <ClInclude Include="MetaGraph\MetaVertex.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\MetaGraph.h">
+    <ClInclude Include="MetaGraph\Rule.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\MetaGraff\github\Rule.h">
+    <ClInclude Include="MetaGraph\Vertex.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

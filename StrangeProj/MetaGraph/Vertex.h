@@ -1,0 +1,38 @@
+/*
+Класс вершины - наследуется от базового класса (от туда берётся имя)
+Вершина хранит в себе список аттрибутов и явлется уже элементарным объектом
+*/
+#ifndef __INCLUDE__VERTEX__
+#define __INCLUDE__VERTEX__
+
+#include "Attribute.h"
+#include "basicObj.h"
+
+//Необходим shared_ptr для избежания утечки при работе
+typedef std::shared_ptr<Attribute> attribute_ptr;
+typedef std::vector<attribute_ptr> attribute_list;
+
+
+class Vertex : public basicObj{
+  public:
+      Vertex(const std::string& Name) : basicObj(Name) {}
+	  Vertex(const Vertex& from) : basicObj(from) {
+		  if (this != &from) 
+			  for (auto i : from.attributes) 
+				  //ВНИМАНИЕ, НУЖНО ПРИДУМАТЬ ЧТО-ТО БОЛЕЕ УНИВЕРСАЛЬНОЕ!!!
+				  addAttribute(new TypedAttribute<int>(i->getName(), *(int*)i->getData()));
+	  }
+      ~Vertex(){}
+
+	  //Стандартный код для работы с аттрибутами
+	  attribute_list& getAttributes() { return attributes; }
+	  template< typename T >
+	  void addAttribute(TypedAttribute<T>* newAttribute) {
+		  attributes.push_back(attribute_ptr(newAttribute));
+	  }
+
+  protected:
+    attribute_list attributes;
+};
+
+#endif

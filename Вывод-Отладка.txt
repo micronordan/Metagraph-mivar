@@ -1,0 +1,73 @@
+﻿"StrangeProj.exe" (Win32). Загружено "C:\Users\Nordan\source\repos\StrangeProj\Debug\StrangeProj.exe". Символы загружены.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntdll.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\KernelBase.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\apphelp.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\AcLayers.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcrt.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\user32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\win32u.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\gdi32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\gdi32full.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcp_win.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbase.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\shell32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\cfgmgr32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\SHCore.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\rpcrt4.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\sspicli.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\cryptbase.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\bcryptprimitives.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\sechost.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\combase.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\windows.storage.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\advapi32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\shlwapi.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\kernel.appcore.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\profapi.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\powrprof.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\fltLib.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\oleaut32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\setupapi.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\mpr.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\sfc.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Выгружено "C:\Windows\SysWOW64\sfc.dll"
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\winspool.drv". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\propsys.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\IPHLPAPI.DLL". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\bcrypt.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\sfc.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\sfc_os.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\imm32.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\msvcp140d.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\vcruntime140d.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\ucrtbased.dll". Невозможно найти или открыть PDB-файл.
+Debug Assertion Failed!
+
+Program: <program name unknown>
+File: c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.15.26726\include\vector
+Line: 1733
+
+Expression: vector subscript out of range
+
+For information on how your program can cause an assertion
+failure, see the Visual C++ documentation on asserts.
+
+(Press Retry to debug the application)
+Поток 0xa78 завершился с кодом 0 (0x0).
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\uxtheme.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\msctf.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\dwmapi.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\TextInputFramework.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\CoreUIComponents.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\CoreMessaging.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\WinTypes.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\ntmarta.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\WinTypes.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Выгружено "C:\Windows\SysWOW64\WinTypes.dll"
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\oleacc.dll". Невозможно найти или открыть PDB-файл.
+"StrangeProj.exe" (Win32). Загружено "C:\Windows\SysWOW64\ole32.dll". Невозможно найти или открыть PDB-файл.
+Поток 0x970 завершился с кодом 3 (0x3).
+Поток 0x3f28 завершился с кодом 3 (0x3).
+Поток 0x3de4 завершился с кодом 3 (0x3).
+Программа "[11688] StrangeProj.exe" завершилась с кодом 3 (0x3).

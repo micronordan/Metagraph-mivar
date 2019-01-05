@@ -1,3 +1,4 @@
+//Чисто для копирование вершин
 #include "pch.h"
 #include "MetaGraph/MetaVertex.h"
 
@@ -5,7 +6,9 @@ MetaVertex& MetaVertex::operator=(MetaVertex& from) {
 	if (this == &from)
 		return *this;
 
-	//Вершины либо забиваются, либо ссылаются на уже забитые
+	//###################### КОПИРОВАНИЕ ВЕРШИН ##############################
+
+	//Вершины метавершины либо забиваются, либо ссылаются на уже забитые
 	std::vector<Vertex*>::iterator it;
 	int counter = 0;
 	for (auto i : from.vertices) {
@@ -21,7 +24,7 @@ MetaVertex& MetaVertex::operator=(MetaVertex& from) {
 		vertices.push_back(new Vertex(*i));
 	}
 
-
+	//###################### КОПИРОВАНИЕ МЕТАВЕРШИН ##############################
 
 	//Лямбда если существует вершина - возвращает её, иначе MetaVertex("null")
 	std::function<MetaVertex*(MetaVertex&, std::vector<MetaVertex*>&, std::vector<MetaVertex*>&)> checkMetaVertex = [&](MetaVertex& MetaVertexToCheck, std::vector<MetaVertex*>& WhereCheck, std::vector<MetaVertex*>& localCopy) mutable -> MetaVertex* {
@@ -87,10 +90,13 @@ MetaVertex& MetaVertex::operator=(MetaVertex& from) {
 		cou++;
 	}
 
+
+	//###################### КОПИРОВАНИЕ ПРАВИЛ ##############################
+
 	//Лямбда для копирования аттрибутов правил
 	auto createConnection = [&](attribute_list& attributeToConnect) mutable {
 		for (auto& j : attributeToConnect) {
-			std::vector<attribute_ptr>::iterator it = std::find(from.getAttributes().begin(), from.getAttributes().end(), j);
+			std:: vector<attribute_ptr>::iterator it = std::find(from.getAttributes().begin(), from.getAttributes().end(), j);
 			if (it != from.getAttributes().end()) {
 				int index = std::distance(from.getAttributes().begin(), it);
 				j.operator =(this->getAttributes()[index]);

@@ -42,12 +42,18 @@
     <ClInclude Include="MetaGraph\Vertex.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="LogicThread.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="StrangeProj.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicThread.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

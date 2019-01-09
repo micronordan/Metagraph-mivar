@@ -14,6 +14,7 @@
 #define __INCLUDE_RULE__
 #include "Vertex.h"
 #include <functional>
+#pragma once
 
 class Rule : basicObj {
 public:

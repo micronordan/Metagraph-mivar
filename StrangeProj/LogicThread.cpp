@@ -80,4 +80,30 @@ bool LogicThread::runSequence()
 	return false;
 }
 
+bool LogicThread::searchNewRules(std::vector<Rule*>& Rules, attribute_list & Input, attribute_list & Output)
+{
+	
+	std::vector < std::vector<std::vector<attribute_list>>> tempRuleList;
+	for (auto i : Rules) {
+		attribute_list tempList;
+		//Находим все возможные переменные, которые могут входить в правило
+		for (auto j : Output)
+			if (std::find(i->getOutputs().begin(), i->getOutputs().end(), j) != i->getOutputs().end()
+				|| std::find(i->getInputs().begin(), i->getInputs().end(), j) != i->getInputs().end())
+				tempList.push_back(j);
+
+		if (!tempList.empty()) {
+			//Если правило сможет, правило вернёт лучший вариант, либо несколько лучших вариантов
+			auto& temp = i->findRuleHandler(tempList);
+			if (!temp.empty()) tempRuleList.push_back(temp);
+		}
+	}
+
+	if (!tempRuleList.empty()) {
+		
+	}
+	return false;
+}
+
+
 

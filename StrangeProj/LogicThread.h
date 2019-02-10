@@ -11,6 +11,7 @@ public:
 	~LogicThread();
 	bool findPath();
 	bool runSequence();
+	bool searchNewRules(std::vector<Rule *>& Rules, attribute_list& Input, attribute_list& Output);
 
 	int getPathStatus() { return pathStatus; }
 

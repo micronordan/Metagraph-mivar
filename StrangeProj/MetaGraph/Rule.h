@@ -71,6 +71,8 @@ public:
 	void setHandler(std::function<void(attribute_list&, attribute_list&)> Rule) { ruleHandler = Rule; }
 	void Run() { ruleHandler(inputRuleAttributes, outputRuleAttributes); }
 
+	std::vector<std::vector<attribute_list>>& findRuleHandler(attribute_list& Outputs);
+
 	//ссылки на аттрибуты входные и выходные (для алгоритма) и мб что-то ещё
 	//нужно что-то поменять, правила не должны жёстко фиксироваться на элементе объекта
 

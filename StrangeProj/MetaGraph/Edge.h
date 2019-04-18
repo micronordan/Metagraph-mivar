@@ -2,25 +2,30 @@
 Класс определяет обычное ребро. Оно создает связь между двумя вершинами.
 Может быть направленно. Имеет имя.
 */
-#ifndef __INCLUDE__EDGE__
-#define __INCLUDE_EDGE__
-#include "Vertex.h"
+#pragma once
+#include "MetaVertex.h"
+#include <functional>
+#define createHandler [&](MetaVertex& antecedens, MetaVertex& consequens)mutable
 
 class Edge : public basicObj {
 public:
 	Edge(const std::string& name) : basicObj(name) {}
-	Edge(const std::string& name, Vertex* v1, Vertex* v2, bool isEO = 0)
-		: basicObj(name), v1(v1), v2(v2), isEO(isEO) {}
+
+	Edge(const std::string& name, std::function<void(MetaVertex&, MetaVertex&)> handler, bool isEO = true)
+		: basicObj(name), edgeHandler(handler), isEO(isEO) {}
+
+	Edge(const std::string& name, std::function<void(MetaVertex&, MetaVertex&)> handler, 
+		std::function<void(MetaVertex&, MetaVertex&)> reversHandler)
+		: basicObj(name), edgeHandler(handler), reversEdgeHandler(reversHandler) {
+		isEO = false;
+	}
 	~Edge(){}
 
   bool getIsEO() { return isEO; }
-  Vertex* getV1() { return v1; }
-  Vertex* getV2() { return v2; }
-
   void setIsEO(bool EO) { isEO = EO; }
-  void setV1(Vertex* newV1) { v1 = newV1; }
-  void setV2(Vertex* newV2) { v1 = newV2; }
 
+  void runEdge(MetaVertex& antecedens, MetaVertex& consequens) { edgeHandler(antecedens, consequens); }
+  void runReversEdge(MetaVertex& antecedens, MetaVertex& consequens) { if(!isEO) reversEdgeHandler(antecedens, consequens); }
 
   //Стандартный код для работы с аттрибутами
   attribute_list& getAttributes() { return attributes; }
@@ -30,10 +35,12 @@ public:
   }
 
 private:
-  Vertex* v1;
-  Vertex* v2;
-  bool isEO;
+	bool isEO;
+	std::function<void(MetaVertex&, MetaVertex&)>  edgeHandler;
+	std::function<void(MetaVertex&, MetaVertex&)>  reversEdgeHandler;
+	std::vector<Edge> preEdgeList;
+	std::vector<Edge> afterEdgeList;
+
+  //Старое
   attribute_list attributes;
 };
-
-#endif

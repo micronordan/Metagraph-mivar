@@ -12,6 +12,13 @@ public:
 	RuleObject(MetaVertex* antecedens, MetaVertex* consequens, Edge* Edge) {
 		addEdge(antecedens, consequens, Edge);
 	}
+	RuleObject(MetaVertex& antecedens, MetaVertex& consequens, Edge& Edge) {
+		addEdge(&antecedens, &consequens, &Edge);
+	}
+	RuleObject(MetaVertex& mutator, Edge& Edge) {
+		addEdge(&mutator, &mutator, &Edge);
+	}
+
 	~RuleObject() {};
 
 	void addEdge(MetaVertex* antecedens, MetaVertex* consequens, Edge* Edge) {
@@ -20,6 +27,10 @@ public:
 
 	vector < pair< pairOfVertex, Edge*>> getVector() {
 		return logicEdges;
+	}
+
+	void runEdge(int edgeNum) {
+		logicEdges[edgeNum].second->runEdge(*logicEdges[edgeNum].first.first, *logicEdges[edgeNum].first.second);
 	}
 
 private:

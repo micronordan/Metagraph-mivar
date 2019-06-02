@@ -25,6 +25,10 @@ public:
 		metaVertices.push_back(element);
 	}
 
+	void addVertice(MetaVertex& element) {
+		metaVertices.push_back(&element);
+	}
+
 
 	std::vector<MetaVertex*>& getMetaVertices() { return metaVertices; }
 	std::vector<Vertex*>& getVertices() { return vertices; }

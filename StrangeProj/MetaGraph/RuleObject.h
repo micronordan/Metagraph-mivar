@@ -1,5 +1,4 @@
 #pragma once
-#include "MetaVertex.h"
 #include "Edge.h"
 using namespace std;
 typedef pair< MetaVertex*, MetaVertex*> pairOfVertex;
@@ -12,9 +11,11 @@ public:
 	RuleObject(MetaVertex* antecedens, MetaVertex* consequens, Edge* Edge) {
 		addEdge(antecedens, consequens, Edge);
 	}
+
 	RuleObject(MetaVertex& antecedens, MetaVertex& consequens, Edge& Edge) {
 		addEdge(&antecedens, &consequens, &Edge);
 	}
+
 	RuleObject(MetaVertex& mutator, Edge& Edge) {
 		addEdge(&mutator, &mutator, &Edge);
 	}
@@ -25,11 +26,20 @@ public:
 		logicEdges.push_back(std::make_pair(std::make_pair(antecedens, consequens), Edge));
 	}
 
+	void addEdge(MetaVertex& antecedens, MetaVertex& consequens, Edge& Edge) {
+		logicEdges.push_back(std::make_pair(std::make_pair(&antecedens, &consequens), &Edge));
+	}
+
+	void addEdge(MetaVertex& antecedens, Edge& mutator) {
+		logicEdges.push_back(std::make_pair(std::make_pair(&antecedens, &antecedens), &mutator	));
+	}
+
+
 	vector < pair< pairOfVertex, Edge*>> getVector() {
 		return logicEdges;
 	}
 
-	void runEdge(int edgeNum) {
+	void runEdge(int edgeNum = 0) {
 		logicEdges[edgeNum].second->runEdge(*logicEdges[edgeNum].first.first, *logicEdges[edgeNum].first.second);
 	}
 

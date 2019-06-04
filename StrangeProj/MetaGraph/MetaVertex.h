@@ -20,7 +20,11 @@ public:
 	void addVertice(Vertex* element) {
 		vertices.push_back(element);
 	}
+	void addVertice(Vertex& element) {
+		vertices.push_back(&element);
+	}
 
+	
 	void addVertice(MetaVertex* element) {
 		metaVertices.push_back(element);
 	}

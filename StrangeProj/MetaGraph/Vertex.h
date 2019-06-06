@@ -26,16 +26,25 @@ class Vertex : public basicObj{
 
 	  //Стандартный код для работы с аттрибутами
 	  attribute_list& getAttributes() { return attributes; }
+
+	  size_t length() { return attributes.size(); }
 	  template< typename T >
 	  void addAttribute(TypedAttribute<T>* newAttribute) {
 		  attributes.push_back(attribute_ptr(newAttribute));
 	  }
+
+	  
+	  Attribute& operator[](const int index) { return *attributes[index]; }
+
+	  //TypedAttribute<int>& operator[](const int index) { return (TypedAttribute<int>) *attributes[index]; }
 
 	  template< typename T >
 	  void addAttribute(T data, std::string name = " ") {
 		  //auto temp = std::make_unique<TypedAttribute<T>>(name, data);
 		  attributes.push_back(attribute_ptr(new TypedAttribute<T>(name, data)));
 	  }
+
+
 
   protected:
     attribute_list attributes;

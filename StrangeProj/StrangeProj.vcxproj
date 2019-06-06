@@ -155,10 +155,10 @@
     <ClInclude Include="MetaGraph\Attribute.h" />
     <ClInclude Include="MetaGraph\basicObj.h" />
     <ClInclude Include="MetaGraph\Edge.h" />
+    <ClInclude Include="MetaGraph\MetaEdge.h" />
     <ClInclude Include="MetaGraph\MetaGraph.h" />
     <ClInclude Include="MetaGraph\MetaGraphLib.h" />
     <ClInclude Include="MetaGraph\MetaVertex.h" />
-    <ClInclude Include="MetaGraph\RuleObject.h" />
     <ClInclude Include="MetaGraph\Vertex.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>

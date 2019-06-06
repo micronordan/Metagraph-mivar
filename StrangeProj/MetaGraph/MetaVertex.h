@@ -4,7 +4,10 @@
 */
 #pragma once
 #include "Vertex.h"
+#include "Edge.h"
 #include <map>
+typedef std::pair< Vertex*, Vertex*> pairOfVertex;
+
 
 class MetaVertex : public Vertex {
 public:
@@ -17,20 +20,16 @@ public:
 
 	~MetaVertex(){}
 
-	void addVertice(Vertex* element) {
-		vertices.push_back(element);
-	}
 	void addVertice(Vertex& element) {
 		vertices.push_back(&element);
 	}
 
-	
-	void addVertice(MetaVertex* element) {
-		metaVertices.push_back(element);
-	}
-
 	void addVertice(MetaVertex& element) {
 		metaVertices.push_back(&element);
+	}
+
+	void addEdge(Edge& edge) {
+		edges.push_back(&edge);
 	}
 
 
@@ -39,9 +38,36 @@ public:
 
 	MetaVertex& operator=(MetaVertex& from);
 
+	void runEdge(int edgeNum = 0) {
+		logicConnection[edgeNum].second->runEdge(*logicConnection[edgeNum].first.first, *logicConnection[edgeNum].first.second);
+	}
+
+	std::vector < std::pair< pairOfVertex, Edge*>> getLogicVector() {
+		return logicConnection;
+	}
+
+
+	void addEdge(MetaVertex& antecedens, MetaVertex& consequens, Edge& Edge) {
+		logicConnection.push_back(std::make_pair(std::make_pair(&antecedens, &consequens), &Edge));
+	}
+
+	void addEdge(MetaVertex& antecedens, Edge& mutator) {
+		logicConnection.push_back(std::make_pair(std::make_pair(&antecedens, &antecedens), &mutator));
+	}
+
+	void addEdge(Vertex& antecedens, Vertex& consequens, Edge& Edge) {
+		logicConnection.push_back(std::make_pair(std::make_pair(&antecedens, &consequens), &Edge));
+	}
+
+	void addEdge(Vertex& antecedens, Edge& mutator) {
+		logicConnection.push_back(std::make_pair(std::make_pair(&antecedens, &antecedens), &mutator));
+	}
+
 private:
 	std::vector<MetaVertex*> metaVertices;
 	std::vector<Vertex*> vertices;
+	std::vector<Edge*> edges;
+	std::vector < std::pair< pairOfVertex, Edge*>> logicConnection;
 
 	MetaVertex(MetaVertex& from, bool shouldStop) : Vertex(from) {
 		static std::map<void *, void *> Copied_obj;

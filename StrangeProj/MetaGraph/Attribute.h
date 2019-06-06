@@ -21,6 +21,11 @@ public:
 	virtual void changeData(void* newData) = 0;
 	virtual void* getData() =0;
 	const virtual std::type_info* GetValueType() =0;
+
+	virtual operator int() = 0;
+	virtual Attribute& operator=(int from) = 0;
+	//virtual Attribute& operator=(void* from) = 0;
+
 	Attribute& operator=(const Attribute& from) {
 		if (this == &from) {
 			return *this;
@@ -42,9 +47,19 @@ public:
 	void changeData(void* newData) { 
 		m_data = *(T*)newData;
 	}
+
+	Attribute& operator=(int from) {
+		m_data = from;
+		return *this;
+	}
+
 	void* getData() { return &m_data; }
+	virtual operator int() {
+		return (int)m_data;
+	}
 
 	const std::type_info* GetValueType() { return &typeid(T); }
+
 
 	TypedAttribute& operator=(TypedAttribute& from) {
 		if (this == &from) {

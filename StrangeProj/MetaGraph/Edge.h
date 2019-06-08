@@ -9,10 +9,14 @@
 
 class Edge : public basicObj {
 public:
+	std::string EdgeType;
+
 	Edge(const std::string& name) : basicObj(name) {}
 
 	Edge(const std::string& name, std::function<void(Vertex&, Vertex&)> handler, bool isEO = true)
-		: basicObj(name), edgeHandler(handler), isEO(isEO) {}
+		: basicObj(name), edgeHandler(handler), isEO(isEO) {
+		EdgeType = "Edge";
+	}
 
 	Edge(const std::string& name, std::function<void(Vertex&, Vertex&)> handler, Edge& preEdge, bool isEO = true)
 		: basicObj(name), edgeHandler(handler), isEO(isEO) {
@@ -69,6 +73,7 @@ private:
 	std::vector<Edge*> preEdgeList;
 	std::vector<Edge*> afterEdgeList;
 
+	
 	//Старое
 	attribute_list attributes;
 };

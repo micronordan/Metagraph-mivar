@@ -38,14 +38,14 @@ public:
 
 	MetaVertex& operator=(MetaVertex& from);
 
-	void runEdge(int edgeNum = 0) {
-		logicConnection[edgeNum].second->runEdge(*logicConnection[edgeNum].first.first, *logicConnection[edgeNum].first.second);
-	}
 
-	std::vector < std::pair< pairOfVertex, Edge*>> getLogicVector() {
+	std::vector < std::pair< pairOfVertex, Edge*>>& getLogicVector() {
 		return logicConnection;
 	}
 
+	operator std::vector < std::pair< pairOfVertex, Edge*>>&() {
+		return logicConnection;
+	}
 
 	void addEdge(MetaVertex& antecedens, MetaVertex& consequens, Edge& Edge) {
 		logicConnection.push_back(std::make_pair(std::make_pair(&antecedens, &consequens), &Edge));
@@ -100,5 +100,20 @@ private:
 				Copied_obj.insert(std::pair<void*, void*>(i, metaVertices.back()));
 			}
 		}
+
+		//Пихаем ребра
+		for (auto i : from.edges) {
+			auto it = Copied_obj.find(i);
+
+			if (it != Copied_obj.end())
+				edges.push_back((Edge*)it->second);
+			else {
+				edges.push_back(new Edge(*i));
+				Copied_obj.insert(std::pair<void*, void*>(i, metaVertices.back()));
+			}
+		}
+
+		//Пихаем connection
+
 	}
 };

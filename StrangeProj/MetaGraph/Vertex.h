@@ -15,6 +15,7 @@ typedef std::vector<attribute_ptr> attribute_list;
 
 class Vertex : public basicObj{
   public:
+	  Vertex() : basicObj( " ") {}
       Vertex(const std::string& Name) : basicObj(Name) {}
 	  Vertex(const Vertex& from) : basicObj(from) {
 		  if (this != &from) 
@@ -24,6 +25,9 @@ class Vertex : public basicObj{
 	  }
       ~Vertex(){}
 
+	  Vertex& operator=(const Vertex& old) {
+		  Vertex(old);
+	  }
 	  //Стандартный код для работы с аттрибутами
 	  attribute_list& getAttributes() { return attributes; }
 
@@ -36,7 +40,6 @@ class Vertex : public basicObj{
 	  
 	  Attribute& operator[](const int index) { return *attributes[index]; }
 
-	  //TypedAttribute<int>& operator[](const int index) { return (TypedAttribute<int>) *attributes[index]; }
 
 	  template< typename T >
 	  void addAttribute(T data, std::string name = " ") {

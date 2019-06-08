@@ -9,10 +9,15 @@
 
 class MetaEdge : public Edge {
 public:
+
+	std::string EdgeType;
+
 	MetaEdge(const std::string& name) : Edge(name) {}
 
 	MetaEdge(const std::string& name, std::function<void(MetaVertex&, MetaVertex&)> handler, bool isEO = true)
-		: Edge(name), edgeHandler(handler), isEO(isEO) {}
+		: Edge(name), edgeHandler(handler), isEO(isEO) {
+		EdgeType = "MetaEdge";
+	}
 
 	MetaEdge(const std::string& name, std::function<void(MetaVertex&, MetaVertex&)> handler, MetaEdge& preEdge, bool isEO = true)
 		: Edge(name), edgeHandler(handler), isEO(isEO) {
@@ -40,9 +45,6 @@ public:
 		isEO = false;
 	}
 	~MetaEdge(){}
-
-  bool getIsEO() { return isEO; }
-  void setIsEO(bool EO) { isEO = EO; }
 
   void runEdge(MetaVertex& antecedens, MetaVertex& consequens) {
 	  if (!preEdgeList.empty())

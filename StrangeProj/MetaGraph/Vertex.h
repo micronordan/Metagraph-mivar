@@ -25,9 +25,14 @@ class Vertex : public basicObj{
 	  }
       ~Vertex(){}
 
-	  Vertex& operator=(const Vertex& old) {
-		  Vertex(old);
+	  Vertex& operator=(Vertex& old) {
+		  this->changeName(old.getName());
+		  if (this != &old)
+			  for (auto i : old.attributes)
+				  //ВНИМАНИЕ, НУЖНО ПРИДУМАТЬ ЧТО-ТО БОЛЕЕ УНИВЕРСАЛЬНОЕ!!!
+				  addAttribute(new TypedAttribute<int>(i->getName(), *(int*)i->getData()));
 	  }
+
 	  //Стандартный код для работы с аттрибутами
 	  attribute_list& getAttributes() { return attributes; }
 

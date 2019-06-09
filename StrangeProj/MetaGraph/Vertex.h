@@ -31,6 +31,7 @@ class Vertex : public basicObj{
 			  for (auto i : old.attributes)
 				  //ВНИМАНИЕ, НУЖНО ПРИДУМАТЬ ЧТО-ТО БОЛЕЕ УНИВЕРСАЛЬНОЕ!!!
 				  addAttribute(new TypedAttribute<int>(i->getName(), *(int*)i->getData()));
+		  return *this;
 	  }
 
 	  //Стандартный код для работы с аттрибутами

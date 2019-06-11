@@ -23,39 +23,11 @@ public:
 		auto edge = connection[edgeNum].second;
 		
 		if (edge->EdgeType == "Edge") {
-			if (!edge->getPreEdgeList().empty())
-				for (size_t i = 0; i < edge->getPreEdgeList().size(); i++) {
-					std::vector< std::pair< pairOfVertex, Edge*>> test = { std::make_pair(std::make_pair(connection[edgeNum].first.first, connection[edgeNum].first.second), connection[edgeNum].second) };
-					RunMetaGraph(test, i);
-				}
-
 			edge->runEdge(*connection[edgeNum].first.first, *connection[edgeNum].first.second);
-			
-			if (edge->EdgeType == "Edge") {
-				if (!edge->getAfterEdgeList().empty())
-					for (size_t i = 0; i < edge->getAfterEdgeList().size(); i++) {
-						std::vector< std::pair< pairOfVertex, Edge*>> test = { std::make_pair(std::make_pair(connection[edgeNum].first.first, connection[edgeNum].first.second), connection[edgeNum].second) };
-						RunMetaGraph(test, i);
-					}
-			}
 		}
 		else {
-			if (!edge->getPreEdgeList().empty())
-				for (size_t i = 0; i < edge->getPreEdgeList().size(); i++) {
-					std::vector< std::pair< pairOfVertex, Edge*>> test = { std::make_pair(std::make_pair(connection[edgeNum].first.first, connection[edgeNum].first.second), connection[edgeNum].second) };
-					RunMetaGraph(test, i);
-				}
-
 			MetaEdge* metaEdge = (MetaEdge*)connection[edgeNum].second;
 			metaEdge->runEdge(*(MetaVertex*)connection[edgeNum].first.first, *(MetaVertex*)connection[edgeNum].first.second);
-
-			if (edge->EdgeType == "Edge") {
-				if (!edge->getAfterEdgeList().empty())
-					for (size_t i = 0; i < edge->getAfterEdgeList().size(); i++) {
-						std::vector< std::pair< pairOfVertex, Edge*>> test = { std::make_pair(std::make_pair(connection[edgeNum].first.first, connection[edgeNum].first.second), connection[edgeNum].second) };
-						RunMetaGraph(test, i);
-					}
-			}
 		}
 	}
 private:
@@ -64,3 +36,5 @@ private:
 	std::vector<Edge*> Edges;
 	std::vector<Vertex*> Vertices;
 };
+
+MetaGraph mainMetaGraph;

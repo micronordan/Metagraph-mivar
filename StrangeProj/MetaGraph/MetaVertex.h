@@ -16,7 +16,7 @@ public:
 		MetaVertex(from, true);//Это очистит список
 	}
 
-	MetaVertex(const std::string& Name) : Vertex(Name) {}
+	MetaVertex(const std::string& Name = " ") : Vertex(Name) {}
 
 	~MetaVertex(){}
 
@@ -26,6 +26,14 @@ public:
 
 	void addVertice(MetaVertex& element) {
 		metaVertices.push_back(&element);
+	}
+
+	void addVertice(Vertex* element) {
+		vertices.push_back(element);
+	}
+
+	void addVertice(MetaVertex* element) {
+		metaVertices.push_back(element);
 	}
 
 	/*void addEdge(Edge& edge) {

@@ -48,7 +48,13 @@ public:
 		m_data = *(T*)newData;
 	}
 
+
 	Attribute& operator=(int from) {
+		m_data = from;
+		return *this;
+	}
+
+	Attribute& operator=(std::string from) {
 		m_data = from;
 		return *this;
 	}
